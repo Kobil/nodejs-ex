@@ -55,10 +55,11 @@ var initDb = function(callback) {
     console.log('Connected to MongoDB at: %s', mongoURL);
   });
 };
-
+console.log("Hello world 1");
 app.get('/', function (req, res) {
   // try to initialize the db on every request if it's not already
   // initialized.
+  console.log("Hello world 2");
   if (!db) {
     initDb(function(err){});
   }
